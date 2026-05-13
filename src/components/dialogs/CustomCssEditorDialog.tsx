@@ -6,6 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import { handleTextareaInsertTab } from '@/lib/textareaTab';
 import { resumeAtom } from '@/store/resumeStore';
 import { useAtom } from 'jotai';
 import { Palette } from 'lucide-react';
@@ -134,8 +135,10 @@ export const CustomCssEditorDialog = ({ isOpen, onClose }: CustomCssEditorDialog
             <textarea
               value={customCSS}
               onChange={(e) => setCustomCSS(e.target.value)}
+              onKeyDown={(e) => handleTextareaInsertTab(e, customCSS, setCustomCSS)}
               placeholder="在此编写 CSS..."
               rows={12}
+              spellCheck={false}
               className="w-full rounded-md border border-gray-200 p-3 text-xs font-mono leading-relaxed focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
             />
           </div>
