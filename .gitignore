@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Playwright CLI run artifacts (snapshots, logs)
+.playwright-cli/
+
+# Local-only Claude / agent settings (do not share)
+.claude/settings.local.json
