@@ -19,15 +19,15 @@ export const TimelineContent = ({ data, isEditable, onUpdateItem }: TimelineCont
   return (
     <>
       {data.map((item) => (
-        <div key={item.id} className="relative group/item">
+        <div key={item.id} className="relative">
           {isEditable && (
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-0 right-0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 hover:bg-gray-100 h-7 w-7 print:hidden z-10"
+              className="absolute top-0 right-0 h-7 w-7 print:hidden z-10 bg-white text-black border border-neutral-300 shadow-sm hover:bg-neutral-100 hover:text-black"
               onClick={() => setEditingId(item.id)}
             >
-              <Edit3 className="h-3.5 w-3.5 text-gray-500" />
+              <Edit3 className="h-3.5 w-3.5 text-black" />
             </Button>
           )}
 

@@ -19,15 +19,15 @@ export const SplitBasicInfoSection = ({ section, isEditable, className }: SplitB
 
   return (
     <>
-      <section className={`relative group ${className || ''}`}>
+      <section className={`relative ${className || ''}`}>
         {isEditable && (
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-slate-200/40 h-8 w-8 print:hidden z-20"
+            className="absolute top-0 right-0 h-8 w-8 print:hidden z-20 bg-white text-black border border-neutral-300 shadow-sm hover:bg-neutral-100 hover:text-black"
             onClick={startEditing}
           >
-            <Edit3 className="h-4 w-4 text-slate-600" />
+            <Edit3 className="h-4 w-4 text-black" />
           </Button>
         )}
 

@@ -31,16 +31,16 @@ export const BasicInfoSection = ({ section, isEditable, className }: BasicInfoSe
   return (
     <>
       {/* 简约风格头部区域 */}
-      <div className={`relative group px-8 pt-8 pb-6 print:px-6 print:pt-6 print:pb-4 ${className || ''}`}>
+      <div className={`relative px-8 pt-8 pb-6 print:px-6 print:pt-6 print:pb-4 ${className || ''}`}>
         {/* 编辑按钮 */}
         {isEditable && (
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-100 h-8 w-8 print:hidden z-20"
+            className="absolute top-4 right-4 h-8 w-8 print:hidden z-20 bg-white text-black border border-neutral-300 shadow-sm hover:bg-neutral-100 hover:text-black"
             onClick={startEditing}
           >
-            <Edit3 className="h-4 w-4 text-gray-600" />
+            <Edit3 className="h-4 w-4 text-black" />
           </Button>
         )}
 
